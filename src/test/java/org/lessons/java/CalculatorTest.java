@@ -12,7 +12,6 @@ class CalculatorTest {
 	float results;
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		
 		myCalculator = new Calculator();
 	}
 
@@ -71,6 +70,18 @@ class CalculatorTest {
 		}
 	}
 	
+	@Test
+	@DisplayName("verifica moltiplicazione")
+	void multiplyTestWithZero() {
+		try {
+//			richiamo il metodo dentro la classe Calculator e gli assegno i parametri
+			results = myCalculator.multiply(0, 3);
+			assertEquals(0, results, "la moltiplicazione darà 0");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 
 }
