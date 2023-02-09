@@ -8,12 +8,7 @@ public class Calculator {
 		super();
 		
 	}
-	public float getNum1() {
-		return num1;
-	}
-	public float getNum2() {
-		return num2;
-	}
+
 	
 	public float add( float num1,  float num2) {
 		float sum = num1 + num2;
