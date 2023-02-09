@@ -49,7 +49,7 @@ public class Calculator {
 		if(num1 > 0 && num2 > 0) {
 			return resultMultiply;
 		}else {
-			throw new Exception("i numeri non può essere inferiore a 0");
+			throw new Exception("i numeri non possono essere inferiori a 0");
 		}
 		
 	}
