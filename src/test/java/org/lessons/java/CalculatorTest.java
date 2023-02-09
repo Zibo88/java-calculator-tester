@@ -45,6 +45,22 @@ class CalculatorTest {
 	}
 	
 	@Test
+	@DisplayName("num1 inferiore a num2") //messaggio mostrato all'utente
+	void substractTestErr() {
+		try {
+//					espressione lambda, per testare i dati errati è necessario inserire un dato sbagliato (-5) e avremo un risultato positivo nel Test perchè ha trovato l'eccezione,
+					//inserendo un dato valido ci darà invece errore 
+			assertThrows(Exception.class, () ->  myCalculator.substract(3, 5), "eccezione" );
+	
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	
+	
+	}
+	
+	@Test
 	@DisplayName("verifica divisione")
 	void divideTest() {
 		try {
@@ -75,12 +91,28 @@ class CalculatorTest {
 	void multiplyTestWithZero() {
 		try {
 //			richiamo il metodo dentro la classe Calculator e gli assegno i parametri
-			results = myCalculator.multiply(0, 3);
-			assertEquals(0, results, "la moltiplicazione darà 0");
+			results = myCalculator.multiply(3, 3);
+			assertEquals(9, results, "la moltiplicazione darà 9");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	@DisplayName("num1 e num2 non possono essere < 1") //messaggio mostrato all'utente
+	void multiplyTestErr() {
+		try {
+//					espressione lambda, per testare i dati errati è necessario inserire un dato sbagliato (-5) e avremo un risultato positivo nel Test perchè ha trovato l'eccezione,
+					//inserendo un dato valido ci darà invece errore 
+			assertThrows(Exception.class, () ->  myCalculator.multiply(0, 3), "eccezione" );
+	
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	
+	
 	}
 	
 
